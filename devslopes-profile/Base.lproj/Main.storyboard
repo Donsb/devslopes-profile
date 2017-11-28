@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="80M-Ai-KSC">
-                                <rect key="frame" x="96.666666666666742" y="294" width="182" height="57"/>
+                                <rect key="frame" x="96.666666666666686" y="294" width="182" height="57"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMq-u1-Oa6">
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="57"/>
@@ -71,7 +71,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="164" height="164"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4Ec-bB-hJx" secondAttribute="height" multiplier="1:1" id="7By-gd-MIp"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="Hzx-4Z-nIU"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images Image" translatesAutoresizingMaskIntoConstraints="NO" id="LEL-DW-MoU">
@@ -79,14 +78,20 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Data Image" translatesAutoresizingMaskIntoConstraints="NO" id="D5R-0M-pEF">
-                                <rect key="frame" x="16" y="544" width="110" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Images Image" translatesAutoresizingMaskIntoConstraints="NO" id="w00-Jl-ug4">
-                                <rect key="frame" x="249" y="544" width="110" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="acD-l3-dS2">
+                                <rect key="frame" x="16" y="554" width="343" height="163.33333333333337"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Videos Image" translatesAutoresizingMaskIntoConstraints="NO" id="zjO-jp-gwO">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="163.33333333333334"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zjO-jp-gwO" secondAttribute="height" multiplier="1:1" id="QVF-Iw-l4a"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Code" translatesAutoresizingMaskIntoConstraints="NO" id="Eik-ib-vf3">
+                                        <rect key="frame" x="179" y="0.0" width="164" height="163.33333333333334"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -100,7 +105,10 @@
                             <constraint firstItem="ya3-kt-ile" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="YYc-b5-1kz"/>
                             <constraint firstItem="Fb7-Yg-qtl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="dkB-c8-5wf"/>
                             <constraint firstAttribute="trailing" secondItem="ya3-kt-ile" secondAttribute="trailing" constant="16" id="elR-es-sUA"/>
+                            <constraint firstItem="acD-l3-dS2" firstAttribute="top" secondItem="ya3-kt-ile" secondAttribute="bottom" constant="15" id="lb2-vM-g5x"/>
                             <constraint firstItem="Fb7-Yg-qtl" firstAttribute="top" secondItem="GK9-gp-Ddq" secondAttribute="bottom" id="mb6-2J-hTk"/>
+                            <constraint firstItem="acD-l3-dS2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="nda-YV-Wxp"/>
+                            <constraint firstAttribute="trailing" secondItem="acD-l3-dS2" secondAttribute="trailing" constant="16" id="ulA-PB-cc9"/>
                             <constraint firstItem="8g6-Ik-jyc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="wHX-hV-FqO"/>
                         </constraints>
                     </view>
@@ -111,9 +119,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Code" width="500" height="250"/>
         <image name="Data Image" width="500" height="250"/>
         <image name="Devslopes BG - June 2017-1920x1080" width="1920" height="1080"/>
         <image name="Images Image" width="500" height="250"/>
+        <image name="Videos Image" width="500" height="250"/>
         <image name="cameraButton" width="57" height="57"/>
         <image name="devslopesProfileLogo" width="191" height="191"/>
         <image name="favoriteButton" width="58" height="57"/>
